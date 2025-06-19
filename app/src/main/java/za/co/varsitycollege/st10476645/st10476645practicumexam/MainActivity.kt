@@ -9,8 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
-
+import androidx.lifecycle.viewmodel.CreationExtras
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,9 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         val songtitle = arrayListOf<String>(R.id.songtitle.toString())
         val artistname = arrayListOf<String>(R.id.artistname.toString())
-        val userrating = arrayListOf<String>(R.id.userrating.toString())
+        var userrating = findViewById<EditText>(R.id.userrating)
         val usercomments = arrayListOf<String>(R.id.usercomments.toString())
-
+        var userratingList = intArrayOf()
 
         val addtoplaylistbtn = findViewById<Button>(R.id.addtoplaylistbtn)
         val exitbtn = findViewById<Button>(R.id.exitbtn)
@@ -38,20 +37,16 @@ class MainActivity : AppCompatActivity() {
         addtoplaylistbtn.setOnClickListener {
 
             for (i in songtitle.indices) {
-                println(songtitle[i])
+              songtitle.add((songtitle.toString()))
                 for (i in artistname.indices)
-                    println(artistname[i])
-                for (i in userrating.indices)
-                    println(userrating[i])
+                   artistname.add((artistname.toString()))
                 for (i in usercomments.indices)
-                    println(usercomments[i])
+                    usercomments.add((usercomments.toString()))
+                for (i in userrating.indices)
+                    userrating.add((userratingList))
 
             }
         }
-
-
-
-
 
         detailsbtn.setOnClickListener {
             val intent = Intent(this, Detailedscreen::class.java)
@@ -60,6 +55,13 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("userrating", userrating)
             intent.putExtra("usercomments", usercomments)
         }
+        exitbtn.setOnClickListener {
+            finishAffinity()
+        }
 
     }
-}
+    }
+
+
+
+
