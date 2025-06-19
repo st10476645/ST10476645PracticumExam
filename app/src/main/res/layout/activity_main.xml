@@ -13,11 +13,6 @@
         android:layout_height="45dp"
         android:text="Hello World!" />
 
-    <Button
-        android:id="@+id/addtoplaylistbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
     <EditText
         android:id="@+id/songtitle"
@@ -52,10 +47,29 @@
         android:text="Name" />
 
     <Button
+        android:id="@+id/addtoplaylistbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to the playlist" />
+
+    <TextView
+        android:layout_width="425dp"
+        android:layout_height="45dp"
+        android:text="Down below bla bla detals " />
+
+
+    <Button
+        android:id="@+id/detailsbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Details" />
+
+    <Button
         android:id="@+id/exitbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Exit" />
+
 
 
 </LinearLayout>

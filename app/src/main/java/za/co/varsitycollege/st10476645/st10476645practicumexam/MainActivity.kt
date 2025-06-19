@@ -1,5 +1,6 @@
 package za.co.varsitycollege.st10476645.st10476645practicumexam
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,6 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         val addtoplaylistbtn = findViewById<Button>(R.id.addtoplaylistbtn)
         val exitbtn = findViewById<Button>(R.id.exitbtn)
+        val details = findViewById<Button>(R.id.detailsbtn)
+
+        for (ind)
+
+
+
 
 
 
