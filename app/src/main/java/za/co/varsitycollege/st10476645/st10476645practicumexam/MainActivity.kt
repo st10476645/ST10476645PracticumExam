@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
+
+
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,32 +31,35 @@ class MainActivity : AppCompatActivity() {
         val usercomments = arrayListOf<String>(R.id.usercomments.toString())
 
 
-
         val addtoplaylistbtn = findViewById<Button>(R.id.addtoplaylistbtn)
         val exitbtn = findViewById<Button>(R.id.exitbtn)
         val detailsbtn = findViewById<Button>(R.id.detailsbtn)
 
-
-
-        fun playlistdetails() { for (song in songtitle) { songtitle += "$song" }
-        for ( artist in artistname){ artistname += "$artist"}
-        for ( rating in userrating) { userrating += "$rating"}
-        for (comments in usercomments){usercomments += "$comments"} }
-
         addtoplaylistbtn.setOnClickListener {
-            playlistdetails()
+
+            for (i in songtitle.indices) {
+                println(songtitle[i])
+                for (i in artistname.indices)
+                    println(artistname[i])
+                for (i in userrating.indices)
+                    println(userrating[i])
+                for (i in usercomments.indices)
+                    println(usercomments[i])
+
+            }
         }
 
-        detailsbtn.setOnClickListener{
-            val intent = Intent(this, Detailedscreen ::class.java)
+
+
+
+
+        detailsbtn.setOnClickListener {
+            val intent = Intent(this, Detailedscreen::class.java)
+            intent.putExtra("songtitle", songtitle)
+            intent.putExtra("artistname", artistname)
+            intent.putExtra("userrating", userrating)
+            intent.putExtra("usercomments", usercomments)
         }
-
-
-
-
-
-
-
 
     }
 }
