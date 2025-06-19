@@ -6,12 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background5"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="425dp"
-        android:layout_height="45dp"
-        android:text="Hello World!" />
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:text="Create your own playlist !                                                                       The concept is simple .Enter the information of 4 songs then click the button below to receive your playlist "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
 
     <EditText
@@ -20,7 +24,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="Tittle of the song"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/artistname"
@@ -28,7 +33,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="Name of the artist"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/userrating"
@@ -36,7 +42,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="How would you rate the song?"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/usercomments"
@@ -44,30 +51,38 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
+        android:text="Any comments?"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/addtoplaylistbtn"
-        android:layout_width="match_parent"
+        android:layout_width="304dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        app:backgroundTint="#1E90FF"
         android:text="Add to the playlist" />
 
     <TextView
         android:layout_width="425dp"
         android:layout_height="45dp"
-        android:text="Down below bla bla detals " />
+        android:text="Click " />
 
 
     <Button
         android:id="@+id/detailsbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Details" />
+        android:layout_marginHorizontal="50dp"
+        app:backgroundTint="#1E90FF"
+         />
 
     <Button
         android:id="@+id/exitbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        app:backgroundTint="#1E90FF"
+        android:layout_marginTop="95dp"
         android:text="Exit" />
 
 

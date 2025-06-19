@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val artistname = arrayListOf<String>(R.id.artistname.toString())
         var userrating = findViewById<EditText>(R.id.userrating)
         val usercomments = arrayListOf<String>(R.id.usercomments.toString())
-        var userratingList = intArrayOf()
+        var rattigsarray = arrayListOf(userrating)
 
         val addtoplaylistbtn = findViewById<Button>(R.id.addtoplaylistbtn)
         val exitbtn = findViewById<Button>(R.id.exitbtn)
@@ -37,13 +37,12 @@ class MainActivity : AppCompatActivity() {
         addtoplaylistbtn.setOnClickListener {
 
             for (i in songtitle.indices) {
-              songtitle.add((songtitle.toString()))
-                for (i in artistname.indices)
-                   artistname.add((artistname.toString()))
+                songtitle.add((songtitle.toString()))
+                for (i in artistname.indices) {
+                    artistname.add((artistname.toString()))
+                }
                 for (i in usercomments.indices)
                     usercomments.add((usercomments.toString()))
-                for (i in userrating.indices)
-                    userrating.add((userratingList))
 
             }
         }
@@ -52,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Detailedscreen::class.java)
             intent.putExtra("songtitle", songtitle)
             intent.putExtra("artistname", artistname)
-            intent.putExtra("userrating", userrating)
             intent.putExtra("usercomments", usercomments)
         }
         exitbtn.setOnClickListener {

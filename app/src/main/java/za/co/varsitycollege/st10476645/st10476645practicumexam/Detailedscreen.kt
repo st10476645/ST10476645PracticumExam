@@ -2,6 +2,8 @@ package za.co.varsitycollege.st10476645.st10476645practicumexam
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -10,7 +12,28 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Detailedscreen : AppCompatActivity() {
+class Detailedscreen() : AppCompatActivity(), Parcelable {
+    constructor(parcel: Parcel) : this() {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Detailedscreen> {
+        override fun createFromParcel(parcel: Parcel): Detailedscreen {
+            return Detailedscreen(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Detailedscreen?> {
+            return arrayOfNulls(size)
+        }
+    }
+
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +45,8 @@ class Detailedscreen : AppCompatActivity() {
             insets
         }
         var songtitle = intent.getStringArrayExtra("songtitle",)
-        var artistame = intent.getStringArrayExtra("artistname")
-        var userrating = intent.getIntExtra("userrating")
+        var artistname = intent.getStringArrayExtra("artistname")
+
         var usercomments = intent.getStringArrayExtra("usercomments")
 
         val playlistdisplaybtn = findViewById<Button>(R.id.playlistdisplaybtn)
@@ -32,20 +55,25 @@ class Detailedscreen : AppCompatActivity() {
         val caldisplay = findViewById<TextView>(R.id.caldisplay)
 
 
-        playlistdisplay.setOnClickListener{
+        playlistdisplay.setOnClickListener {
+            if (songtitle != null) {
+                for (i in songtitle.indices)
+                    println(songtitle[i])
+                if (artistname != null) {
+                    for (i in artistname.indices)
+                        println(artistname[i])
+                    if (usercomments != null) {
+                        for (i in usercomments.indices)
+                            println(usercomments[i])
+
+                    }
 
 
-        }
+                }
+            }
 
 
 
 
-        /* for (i in artistname.indices)
-             println(artistname[i])
-         for (i in userrating.indices)
-             println(userrating[i])
-         for (i in usercomments.indices)
-             println(usercomments[i])*/
 
-    }
-}
+        }}}
