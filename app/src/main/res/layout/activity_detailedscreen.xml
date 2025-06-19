@@ -6,45 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background5"
     tools:context=".Detailedscreen">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="83dp"
         android:text="TextView" />
 
     <Button
         android:id="@+id/playlistdisplaybtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        app:backgroundTint="#1E90FF"
+       />
 
     <TextView
         android:id="@+id/playlistdisplay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="71dp"
+      " />
 
     <Button
         android:id="@+id/calbtton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
+        app:backgroundTint="#1E90FF"
+      />
 
 
     <TextView
         android:id="@+id/caldisplay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="137dp" />
 
     <Button
         android:id="@+id/Gobackbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        app:backgroundTint="#1E90FF"
+        />
 
 
 
