@@ -1,6 +1,7 @@
 package za.co.varsitycollege.st10476645.st10476645practicumexam
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -23,15 +24,31 @@ class MainActivity : AppCompatActivity() {
 
         val songtitle = arrayListOf<String>(R.id.songtitle.toString())
         val artistname = arrayListOf<String>(R.id.artistname.toString())
-        val rating = arrayListOf<String>(R.id.rating.toString())
-        val comments = arrayListOf<String>(R.id.comments.toString())
+        val userrating = arrayListOf<String>(R.id.userrating.toString())
+        val usercomments = arrayListOf<String>(R.id.usercomments.toString())
+
 
 
         val addtoplaylistbtn = findViewById<Button>(R.id.addtoplaylistbtn)
         val exitbtn = findViewById<Button>(R.id.exitbtn)
-        val details = findViewById<Button>(R.id.detailsbtn)
+        val detailsbtn = findViewById<Button>(R.id.detailsbtn)
 
-        for (ind)
+
+
+        fun playlistdetails() { for (song in songtitle) { songtitle += "$song" }
+        for ( artist in artistname){ artistname += "$artist"}
+        for ( rating in userrating) { userrating += "$rating"}
+        for (comments in usercomments){usercomments += "$comments"} }
+
+        addtoplaylistbtn.setOnClickListener {
+            playlistdetails()
+        }
+
+        detailsbtn.setOnClickListener{
+            val intent = Intent(this, Detailedscreen ::class.java)
+        }
+
+
 
 
 
